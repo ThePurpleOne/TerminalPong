@@ -1,19 +1,22 @@
+SRCF = src/
+BLDF = build/
+CC = g++
 
 main: main.o moving_object.o ball.o paddle.o playground.o
-	g++  main.o moving_object.o ball.o paddle.o playground.o -lncurses -o main 
+	$(CC)  $(BLDF)main.o $(BLDF)moving_object.o $(BLDF)ball.o $(BLDF)paddle.o $(BLDF)playground.o -lncurses -o main 
 
-main.o: main.cpp
-	g++ -c main.cpp -o main.o
+main.o: $(SRCF)main.cpp
+	$(CC) -c $(SRCF)main.cpp -o $(BLDF)main.o
 
-moving_object.o : moving_object.cpp
-	g++ -c moving_object.cpp -o moving_object.o
+moving_object.o : $(SRCF)moving_object.cpp
+	$(CC) -c $(SRCF)moving_object.cpp -o $(BLDF)moving_object.o
 
-ball.o: ball.cpp
-	g++ -c ball.cpp -o ball.o
+ball.o: $(SRCF)ball.cpp
+	$(CC) -c $(SRCF)ball.cpp -o $(BLDF)ball.o
 
-paddle.o: paddle.cpp
-	g++ -c paddle.cpp -o paddle.o
+paddle.o: $(SRCF)paddle.cpp
+	$(CC) -c $(SRCF)paddle.cpp -o $(BLDF)paddle.o
 
-playground.o: playground.cpp
-	g++ -c playground.cpp -o playground.o
+playground.o: $(SRCF)playground.cpp
+	$(CC) -c $(SRCF)playground.cpp -o $(BLDF)playground.o
 

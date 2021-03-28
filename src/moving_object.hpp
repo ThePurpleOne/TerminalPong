@@ -9,18 +9,17 @@ class movingObject
 		long posX, posY;
 		long velX, velY;
 
-		
 	public:
 		//Variables
 
 		//Properties
 		long getPosX();
-		void setPosX(long pos);
 		long getPosY();
-		void setPosY(long pos);
 		long getVelX();
-		void setVelX(long vel);
 		long getVelY();
+		void setPosX(long pos);
+		void setPosY(long pos);
+		void setVelX(long vel);
 		void setVelY(long vel);
 
 		//Proto Functions
@@ -28,9 +27,6 @@ class movingObject
 		void update();
 		void inverseVelX();
 		void inverseVelY();
-
-		
-
 };
 
 #endif

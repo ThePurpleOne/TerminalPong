@@ -10,13 +10,11 @@ long movingObject::getPosY(){return posY;}
 long movingObject::getVelX(){return velX;}
 long movingObject::getVelY(){return velY;}
 
-
 //Functions
 void movingObject::draw()
 {
 	
 }
-
 
 void movingObject::update()
 {
@@ -31,5 +29,5 @@ void movingObject::inverseVelX()
 }
 void movingObject::inverseVelY()
 {
-	setVelX(getVelX() * -1);
+	setVelY(getVelY() * -1);
 }

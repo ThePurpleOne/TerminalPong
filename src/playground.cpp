@@ -1,8 +1,6 @@
 #include <iostream>
 #include "playground.hpp"
 
-
-
 //Constructors
 playground::playground(int windowH, int windowW, int windowX, int windowY )
 {
@@ -35,19 +33,16 @@ WINDOW * playground::getWindow()
 void playground::collisionTopBot(ball * b)
 {
 	//Hits the top or bot
-	if ( (b->getPosY() < 2) || (b->getPosY() > (getWindowHeight() - 10) )) 
+	if ( (b->getPosY() < 2) || (b->getPosY() > (getWindowHeight() - 3) )) 
 	{
-		b->inverseVelX();
-		// b.setVelY(-1);
-		mvwaddch(getWindow(), 10, 10, 'D');
-
+		b->inverseVelY();
 	}
 }
-bool playground::collisionLeftWall(ball b)
+bool playground::collisionLeftWall(ball * b)
 {
-	if(b.getPosX() < 5)
+	if(b->getPosX() < 3)
 	{
-		b.inverseVelX();
+		b->inverseVelX();
 		return(true);
 	}
 	else
@@ -55,11 +50,11 @@ bool playground::collisionLeftWall(ball b)
 		return(false);
 	}
 }
-bool playground::collisionRightWall(ball b)
+bool playground::collisionRightWall(ball * b)
 {
-	if(b.getPosX() > getWindowWidth() - 1)
+	if(b->getPosX() > getWindowWidth() - 3)
 	{
-		b.inverseVelX();
+		b->inverseVelX();
 		return(true);
 	}
 	else

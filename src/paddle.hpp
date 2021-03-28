@@ -2,12 +2,13 @@
 #define __PADDLE__
 #include <curses.h>
 #include "moving_object.hpp"
+#include "ball.hpp"
 
 class paddle : public movingObject
 {
 	private:
 		//Attributes
-		int paddleSize = 4;
+		int paddleSize = PADDLE_SIZE;
 	public:
 		
 		//Constructors
@@ -20,6 +21,9 @@ class paddle : public movingObject
 
 		//Functions
 		void draw();
+		void collisionPaddle(ball * b);
+		void moveUp();
+		void moveDown();
 
 		WINDOW  * currentWindow; 
 };

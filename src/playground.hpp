@@ -24,9 +24,8 @@ public:
 
 	//Functions
 	void collisionTopBot(ball * b);
-	bool collisionLeftWall(ball b);
-	bool collisionRightWall(ball b);
-
+	bool collisionLeftWall(ball * b);
+	bool collisionRightWall(ball * b);
 
 };
 
