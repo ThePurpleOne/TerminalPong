@@ -1,2 +1,2 @@
-Basic pong game to learn CPP basics
+Basic implementation of Pong game, made in CPP to learn the language.
 
